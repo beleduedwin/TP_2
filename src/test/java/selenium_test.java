@@ -18,8 +18,26 @@ public class selenium_test {
     @Before//s'execute avant toutes les methode qui commence par @test
     public void setup()
     {
+        String browser = System.getProperty("browser");
+        if (browser == null)
+        {
+            driver = new ChromeDriver();
+        }
+        else if (browser.equals("chrome"))
+        {
+            driver = new ChromeDriver();
+        }
+        else if (browser.equals("firefox"))
+        {
+            driver = new FirefoxDriver();
+        }
+        else
+        {
+            driver = new ChromeDriver();
+        }
+
         //driver = new ChromeDriver();//instance de l'objet drive
-        driver = new FirefoxDriver();//instance de l'objet drive
+        //driver = new FirefoxDriver();//instance de l'objet drive
 
         //dans ce cas on peux enlever le sleep, se defini au debbut; cette instruction ne parche qu'avec le findElement
         //NB : est utile quand la connexion met du temps à afficher
@@ -39,8 +57,10 @@ public class selenium_test {
         //je compare cette chaine de caractère avec ce qui doit s'afficher sur l'ecran
         //String excepted = "Edwin Beledu - Stage Développeur Web Fullstack - AutoWebbb ...";
         String excepted = "French language - Wikipedia";
+
         WebElement barreRecherche = driver.findElement(By.id("lst-ib"));
         //barreRecherche.sendKeys( "edwin beledu");//envoyer la clé
+
         barreRecherche.sendKeys( "french");//envoyer la clé
         barreRecherche.sendKeys(Keys.ENTER);//tape sur enter
 
