@@ -38,10 +38,10 @@ public class selenium_test {
     public void testEnter() throws InterruptedException {
         //je compare cette chaine de caractère avec ce qui doit s'afficher sur l'ecran
         //String excepted = "Edwin Beledu - Stage Développeur Web Fullstack - AutoWebbb ...";
-        String excepted = "République française - France — Wikipédia";
+        String excepted = "French language - Wikipedia";
         WebElement barreRecherche = driver.findElement(By.id("lst-ib"));
         //barreRecherche.sendKeys( "edwin beledu");//envoyer la clé
-        barreRecherche.sendKeys( "france");//envoyer la clé
+        barreRecherche.sendKeys( "french");//envoyer la clé
         barreRecherche.sendKeys(Keys.ENTER);//tape sur enter
 
        WebElement premierResultat =  driver.findElement(By.cssSelector(".rc>.r>a"));//
