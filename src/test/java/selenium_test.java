@@ -44,7 +44,7 @@ public class selenium_test {
         barreRecherche.sendKeys( "france");//envoyer la clé
         barreRecherche.sendKeys(Keys.ENTER);//tape sur enter
 
-       WebElement premierResultat =  driver.findElement(By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a"));
+       WebElement premierResultat =  driver.findElement(By.cssSelector(".rc>.r>a"));
 
         //le path de mon objet
         //WebElement premierResultat =  driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div[1]/div/div/h3/a"));
