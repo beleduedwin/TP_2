@@ -46,6 +46,7 @@ public class selenium_test {
 
        WebElement premierResultat =  driver.findElement(By.cssSelector(".rc>.r>a"));
 
+       
         //le path de mon objet
         //WebElement premierResultat =  driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div[1]/div/div/h3/a"));
         Assert.assertEquals(excepted, premierResultat.getText());
