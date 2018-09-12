@@ -15,8 +15,8 @@ dependencies {
 
     //pour télécharger selenium
     compile group : 'org.seleniumhq.selenium', name: 'selenium-java', version:  '3.14.0'
+}
 
-    tasks.withType(Test){
-        systemProperty 'browser', System.getProperty('browser');
-    }
+tasks.withType(Test){
+    systemProperty 'browser', System.getProperty('browser')//pour utilisation des variable externe
 }

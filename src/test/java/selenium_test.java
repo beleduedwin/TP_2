@@ -35,7 +35,6 @@ public class selenium_test {
         {
             driver = new ChromeDriver();
         }
-
         //driver = new ChromeDriver();//instance de l'objet drive
         //driver = new FirefoxDriver();//instance de l'objet drive
 
